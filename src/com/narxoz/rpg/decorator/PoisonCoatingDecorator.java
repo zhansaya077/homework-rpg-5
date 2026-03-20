@@ -8,13 +8,12 @@ public class PoisonCoatingDecorator extends ActionDecorator {
 
     @Override
     public String getActionName() {
-    
+       
         return "Venomous " + getWrappedAction().getActionName();
     }
 
     @Override
     public int getDamage() {
-        
         return getWrappedAction().getDamage() + 3;
     }
 
