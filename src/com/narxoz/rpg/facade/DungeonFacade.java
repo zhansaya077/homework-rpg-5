@@ -14,15 +14,16 @@ public class DungeonFacade {
         return this;
     }
 
-    public AdventureResult runAdventure(HeroProfile hero, BossEnemy boss, AttackAction action) {
-    String preparationSummary = preparationService.prepare(hero, boss, action);
-    AdventureResult result = battleService.battle(hero, boss, action);
-    
-    result.addLine(0, preparationSummary);
-    
-    String reward = rewardService.determineReward(result);
-    result.setReward(reward);
-    
-    return result;
-}
+   public AdventureResult runAdventure(HeroProfile hero, BossEnemy boss, AttackAction action) {
+        String preparationSummary = preparationService.prepare(hero, boss, action);
+        
+        AdventureResult result = battleService.battle(hero, boss, action);
+        
+        result.addLine(0, preparationSummary);
+        
+        String reward = rewardService.determineReward(result);
+        result.setReward(reward);
+        
+        return result;
+    }
 }
