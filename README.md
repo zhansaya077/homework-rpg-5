@@ -1,5 +1,14 @@
 # Homework 5: RPG Dungeon Run - Decorator + Facade
 
+graph TD
+    Main --> DungeonFacade
+    subgraph Subsystems
+        DungeonFacade --> PreparationService
+        DungeonFacade --> BattleService
+        DungeonFacade --> RewardService
+    end
+    BattleService --> AdventureResult
+    RewardService --> AdventureResult
 
 ## Project Structure
 ```text
