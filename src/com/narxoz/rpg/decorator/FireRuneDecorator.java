@@ -12,7 +12,6 @@ public class FireRuneDecorator extends ActionDecorator {
 
     @Override
     public int getDamage() {
-        // Add +5 fire damage to the base
         return super.getDamage() + 5;
     }
 
