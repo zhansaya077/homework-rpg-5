@@ -1,4 +1,3 @@
-
 package com.narxoz.rpg.decorator;
 
 public class CriticalFocusDecorator extends ActionDecorator {
@@ -21,6 +20,7 @@ public class CriticalFocusDecorator extends ActionDecorator {
 
     @Override
     public String getEffectSummary() {
-        return getWrappedAction().getEffectSummary() + ", Critical Strike Chance";
+        
+        return getWrappedAction().getEffectSummary() + ", Critical Hit (x2)";
     }
 }
